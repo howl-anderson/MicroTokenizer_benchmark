@@ -74,9 +74,9 @@ def tokenizer_MicroTokenizer_with_custom_joint_model(input_file, output_file, de
 
 
 def tokenizer_MicroTokenizer_with_CRF(input_file, output_file, delim="  ", corpus=None):
-    tokenizer_loader = MicroTokenizer.load('core_pd_md')
+    output_dir = os.path.join("MicroTokenizer_model_CRF", corpus)
 
-    tokenizer = tokenizer_loader.get_tokenizer()
+    tokenizer = Tokenizer(output_dir)
 
     with open(input_file, 'r') as fp, open(output_file, 'w') as output_fd:
         output_lines = []
