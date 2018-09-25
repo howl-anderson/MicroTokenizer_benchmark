@@ -1,0 +1,7 @@
+tabulate
+jinja2
+joblib
+
+tokenizers_collection
+
+MicroTokenizer
